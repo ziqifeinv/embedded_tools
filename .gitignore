@@ -1,0 +1,4 @@
+.mxproject
+EWARM/settings/*
+EWARM/freeRTOS_test/*
+EWARM/freeRTOS_test.dep
