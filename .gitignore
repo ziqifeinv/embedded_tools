@@ -2,3 +2,4 @@
 EWARM/settings/*
 EWARM/freeRTOS_test/*
 EWARM/freeRTOS_test.dep
+EWARM/freeRTOS_test.ewt

@@ -350,6 +350,8 @@
                     <state>$PROJ_DIR$/../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32F1xx/Include</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
+                    <state>D:\workspace\STM32\freeRTOS_test\middleware\freeRTOS\Source\include</state>
+                    <state>D:\workspace\STM32\freeRTOS_test\middleware\freeRTOS\Source\portable\IAR\ARM_CM3</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1106,6 +1108,111 @@
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c</name>
             </file>
+        </group>
+    </group>
+    <group>
+        <name>middleware</name>
+        <group>
+            <name>freeRTOS</name>
+            <group>
+                <name>source</name>
+                <group>
+                    <name>inc</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\atomic.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\croutine.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\deprecated_definitions.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\event_groups.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\FreeRTOS.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\FreeRTOSConfig.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\list.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\message_buffer.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\mpu_prototypes.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\mpu_wrappers.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\portable.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\projdefs.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\queue.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\semphr.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\stack_macros.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\StackMacros.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\stream_buffer.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\task.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\include\timers.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>portable</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\portable\MemMang\heap_4.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\portable\IAR\ARM_CM3\port.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\portable\IAR\ARM_CM3\portasm.s</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\portable\IAR\ARM_CM3\portmacro.h</name>
+                    </file>
+                </group>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\croutine.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\event_groups.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\list.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\queue.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\stream_buffer.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\tasks.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\middleware\freeRTOS\Source\timers.c</name>
+                </file>
+            </group>
         </group>
     </group>
 </project>

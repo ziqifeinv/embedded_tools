@@ -5,7 +5,7 @@
 ;*                      This module performs:
 ;*                      - Set the initial SP
 ;*                      - Set the initial PC == __iar_program_start,
-;*                      - Set the vector table entries with the exceptions ISR 
+;*                      - Set the vector table entries with the exceptions ISR
 ;*                        address.
 ;*                      - Configure the system clock
 ;*                      - Branches to main in the C library (which eventually
@@ -39,21 +39,23 @@
 ; table register (VTOR) is initialized to this address if != 0.
 ;
 ; Cortex-M version
-;     
-  
+;
+
     MODULE  ?cstartup
-        
+
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)
 
         SECTION .intvec:CODE:NOROOT(2)
 
         EXTERN  __iar_program_start
-        EXTERN  SystemInit        
+        EXTERN  SystemInit
+        EXTERN  vPortSVCHandler
+        EXTERN  xPortPendSVHandler
         PUBLIC  __vector_table
 
         DATA
-       
+
 __vector_table
         DCD     sfe(CSTACK)
         DCD     Reset_Handler             ; Reset Handler
@@ -66,10 +68,12 @@ __vector_table
         DCD     0                         ; Reserved
         DCD     0                         ; Reserved
         DCD     0                         ; Reserved
-        DCD     SVC_Handler               ; SVCall Handler
+        ;DCD     SVC_Handler               ; SVCall Handler
+        DCD     vPortSVCHandler
         DCD     DebugMon_Handler          ; Debug Monitor Handler
         DCD     0                         ; Reserved
-        DCD     PendSV_Handler            ; PendSV Handler
+        ;DCD     PendSV_Handler            ; PendSV Handler
+        DCD     xPortPendSVHandler
         DCD     SysTick_Handler           ; SysTick Handler
 
          ; External Interrupts
@@ -146,7 +150,7 @@ Reset_Handler
         BLX     R0
         LDR     R0, =__iar_program_start
         BX      R0
-               
+
         PUBWEAK NMI_Handler
         SECTION .text:CODE:REORDER:NOROOT(1)
 NMI_Handler
@@ -491,8 +495,8 @@ DMA2_Channel3_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
 DMA2_Channel4_5_IRQHandler
         B DMA2_Channel4_5_IRQHandler
-        
-        
+
+
         END
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
