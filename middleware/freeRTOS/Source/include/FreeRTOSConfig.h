@@ -48,14 +48,23 @@
     extern uint32_t SystemCoreClock;
 #endif
 
+/* stm32f103retx: 64kB ram */
+#define USER_HEAP_START                         0x20000000
+#define USER_HEAP_END                           (0x2000BFFF - 2048) /* 2KB reserved. */
+#define USER_HEAP_LENGTH                        ((size_t)(USER_HEAP_END - USER_HEAP_START + 1))
+/* memory defien */
+#define configSUPPORT_STATIC_ALLOCATION         0
+#define configSUPPORT_DYNAMIC_ALLOCATION        1
+#define configAPPLICATION_ALLOCATED_HEAP        1
+
 #define configUSE_PREEMPTION		1
 #define configUSE_IDLE_HOOK			0
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( SystemCoreClock )
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES		( 5 )
-#define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 17 * 1024 ) )
+#define configMINIMAL_STACK_SIZE	( ( unsigned short ) 200 )
+#define configTOTAL_HEAP_SIZE		USER_HEAP_LENGTH
 #define configMAX_TASK_NAME_LEN		( 16 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		0
