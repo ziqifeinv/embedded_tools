@@ -59,9 +59,11 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void led_test_task(void *pvParameters)
 {
-    while (1) {
+    while (1)
+    {
         HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-        HAL_Delay(500);
+        //        HAL_Delay(100);
+        vTaskDelay(100);
     }
 }
 /* USER CODE END 0 */
@@ -106,7 +108,8 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
-        xTaskCreate(led_test_task, "LED_TEST_TASK", configMINIMAL_STACK_SIZE, NULL, 7, NULL);
+        xTaskCreate(led_test_task, "LED_TEST_TASK", configMINIMAL_STACK_SIZE,
+                    NULL, 7, NULL);
 
         vTaskStartScheduler();
     }

@@ -50,8 +50,6 @@
 
         EXTERN  __iar_program_start
         EXTERN  SystemInit
-        EXTERN  vPortSVCHandler
-        EXTERN  xPortPendSVHandler
         PUBLIC  __vector_table
 
         DATA
@@ -68,12 +66,10 @@ __vector_table
         DCD     0                         ; Reserved
         DCD     0                         ; Reserved
         DCD     0                         ; Reserved
-        ;DCD     SVC_Handler               ; SVCall Handler
-        DCD     vPortSVCHandler
+        DCD     SVC_Handler               ; SVCall Handler
         DCD     DebugMon_Handler          ; Debug Monitor Handler
         DCD     0                         ; Reserved
-        ;DCD     PendSV_Handler            ; PendSV Handler
-        DCD     xPortPendSVHandler
+        DCD     PendSV_Handler            ; PendSV Handler
         DCD     SysTick_Handler           ; SysTick Handler
 
          ; External Interrupts
