@@ -11,7 +11,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>30</version>
+                <version>31</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.22.1.15696</state>
+                    <state>8.32.1.18618</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -112,7 +112,7 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Full.h</state>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
@@ -204,13 +204,18 @@
                     <name>TrustZone</name>
                     <state>0</state>
                 </option>
+                <option>
+                    <name>TrustZoneModes</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>34</version>
+                <version>35</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -350,8 +355,8 @@
                     <state>$PROJ_DIR$/../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32F1xx/Include</state>
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
-                    <state>D:\workspace\STM32\freeRTOS_test\middleware\freeRTOS\Source\include</state>
-                    <state>D:\workspace\STM32\freeRTOS_test\middleware\freeRTOS\Source\portable\IAR\ARM_CM3</state>
+                    <state>$PROJ_DIR$/../middleware/freeRTOS/Source/include</state>
+                    <state>$PROJ_DIR$/../middleware/freeRTOS/Source/portable/IAR/ARM_CM3</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -464,6 +469,10 @@
                 <option>
                     <name>IccRTTI2</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>OICompilerExtraOption</name>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -613,7 +622,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state>D:\workspace\STM32\freeRTOS_test\middleware\freeRTOS\Source\include</state>
+                    <state>$PROJ_DIR$/../middleware/freeRTOS/Source/include</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -685,7 +694,7 @@
             <name>ILINK</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>20</version>
+                <version>22</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -995,6 +1004,14 @@
                 </option>
                 <option>
                     <name>IlinkLocaleSelect</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>###Unitialized###</state>
+                </option>
+                <option>
+                    <name>OILinkExtraOption</name>
                     <state>1</state>
                 </option>
             </data>
